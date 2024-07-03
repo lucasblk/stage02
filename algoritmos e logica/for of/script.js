@@ -19,16 +19,17 @@ let patients = [
     }
 ]
 
-let pacientsNames = []
-let pacientsAge = []
-let pacientsWeight = []
+/* CRIE UMA FUNCAO QUE CALCULA O IMC DESSES PACIENTES E MOSTRA O IMC DE CADA PACIENTE EM UM ALERT */
 
-for(let patient of patients) {
-    pacientsNames.push(patient.name)
-    pacientsAge.push(patient.age)
-    pacientsWeight.push(patient.weight)
+function CalcIMC(weight, height) {
+    return (weight / (height/100)**2).toFixed(2)
 }
 
-alert(`Paciente: ${pacientsNames},
-    idade: ${pacientsAge} anos,
-    peso: ${pacientsWeight} Kg`)
+function message(patient) {
+    return `Paciente ${patient.name} tem IMC: ${CalcIMC(patient.weight, patient.height)}`
+}
+
+for(let patient of patients) {
+    let imcMsg = message(patient)
+    alert(imcMsg)
+}
