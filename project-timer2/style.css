@@ -68,8 +68,22 @@ button:hover {
 }
 
 .card:hover {
-    background-color: #8c8c90;
+    cursor: pointer;
 }
+
+.tree {
+    background-color: rgb(201, 241, 106);
+}
+.rain {
+    background-color: rgb(66, 94, 235);
+}
+.store {
+    background-color: burlywood;
+}
+.fire {
+    background-color: rgb(216, 103, 103);
+}
+
 
 @media  (min-width: 600px) {
     .cards {
